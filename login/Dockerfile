@@ -1,11 +1,11 @@
 # Stage 1: Build the application using Maven
-FROM eclipse-temurin:17-jdk-jammy as build
+FROM eclipse-temurin:17.0.12_7-jdk-jammy as build
 WORKDIR /app
 COPY . .
 RUN ./mvnw clean install -DskipTests
 
 # Stage 2: Create a smaller, final image to run the application
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:17.0.12_7-jre-jammy
 WORKDIR /app
 
 # Copy the built .jar file from the 'build' stage

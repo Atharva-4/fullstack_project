@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/logins")
 // IMPORTANT: Allows requests from your Angular app's origin (default is localhost:4200)
 @CrossOrigin(origins = "*")
 public class Controller {
